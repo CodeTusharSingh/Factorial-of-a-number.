@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script>
+        $(document).ready(function () {
+            $("#total").click(function () {
+                var p = $("#number").val();
+                var fact = 1;
+                var i = 1;
+                for (i; i <= p; i++) {
+                    fact = fact * i;
+                }
+                document.getElementById('p1').innerHTML = "Factorial is of " + p + " is :: " + fact;
+            });
+        });
+    </script>
+    <style>
+        #in {
+            border: 2px red solid;
+            background-color: darkgrey;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body bgcolor="black">
+    <h1 style="color: blanchedalmond;"><u> Factorial of a Number</u></h1>
+    <div id="in">
+        <form>
+            Number :
+            <input type="text" id="number"><br><br>
+            <button type="button" id="total">Calculate Factorial</button>
+            <input type="reset" value="Clear">
+        </form>
+    </div><br>
+    <div id="in">
+        <p id="p1"> </p>
+    </div>
+</body>
+
+</html>
